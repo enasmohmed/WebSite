@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load  static %}
+    {% block title %}نتائج المباريات{% endblock %}
+
+{% block content %}
+<div align="center">
+    <img class="icon-width" src="{% static 'images/ic_game_score.png' %}"/>
+</div>
+<div align="center">
+    {% include 'add_score.html' %}
+</div>
+{% for score in scores %}
+<div align="center">
+    {% ifchanged %}
+    <h2>{{ score.game_date|date:'d-n-Y' }}</h2>
+    {% endifchanged %}
+    <h2>{{ score.second_team_relation.name }} , {{ score.first_team_relation.name }} نتيجة مباراة  </h2>
+    <h3>{{ score.first_team_score }} - {{ score.second_team_score }} </h3>
+</div>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load  static %}
+
+{% block content %}
+<img class="icon-width" src="{% static 'images/ic_player.jpg' %}"/>
+{% for player in player %}
+<a href="/player/{{player.name}}">
+    <h2>{{ player.name }} </h2>
+</a>
+<h2>{{ player.age }} </h2>
+<h2>{{ player.number }} </h2>
+{% endfor %}
+{% endblock %}

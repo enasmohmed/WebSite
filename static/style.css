@@ -1,0 +1,14 @@
+body {
+    background-image: url('../static/images/bg_pattern.png');
+    background-position: center;
+    background-attachment: scroll;
+    Background-repeat: no-repeat;
+}
+
+.icon-width {
+    width: 30%;
+}
+
+.container-fluid {
+    direction: rtl;
+}
